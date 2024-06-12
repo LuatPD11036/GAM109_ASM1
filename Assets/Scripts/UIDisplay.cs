@@ -1,4 +1,4 @@
-using System.Collections;
+    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -26,7 +26,10 @@ public class UIDisplay : MonoBehaviour
 
     void Update()
     {
+        int score = ScoreKeeper.Instance.GetScore();
         healthSlider.value = playerHealth.GetHealth();
-        scoreText.text = scoreKeeper.GetScore().ToString("000000000");
+        //scoreText.text = scoreKeeper.GetScore().ToString("000000000");
+        scoreText.text = " " + score.ToString();
+
     }
 }
